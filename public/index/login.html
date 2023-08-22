@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Songs</title>
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+<body>
+    <div id='login'>
+        <p>View Your Top Songs</p>
+        <p>Continue Your Good Vibes</p>
+        <button> Log in to Spotify</button>
+    </div>
+    
+    <video id = 'backgroundVideo' autoplay loop muted src="../media/background.mov"></video>
+
+    <!-- Redirect to login page when login button clicked -->
+    <script>
+        document.getElementById('login').addEventListener('click', function(){
+            window.location.href = 'http://localhost:3000/login';
+        });
+    </script>
+</body>
+</html>

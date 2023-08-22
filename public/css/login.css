@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial';
+    font-size: 30px;
+    color: #fff;
+}
+
+#login{
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    height: 250px;
+    width: 400px;
+    padding: 20px; 
+    border-radius: 5px;
+}
+
+#login button{
+    background-color: #1DB954;
+    color: #fff;
+    margin: 20px;
+    padding: 20px 40px;
+    border: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+#login button:hover{
+    background-color: #1ED760;
+}
+
+#backgroundVideo{
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}

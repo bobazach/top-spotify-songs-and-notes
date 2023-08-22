@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="../css/tracks.css">
+</head>
+<body>
+    <!-- Store tracks after API call -->
+    <div id="topTracks"></div>
+
+    <script>
+        async function fetchAndDisplayTopTracks(){
+            try{
+                const response = await fetch('/getTopTracks');
+                const tracks = await response.json();
+                const trackContainer = document.getElementById('topTracks');
+                
+                tracks.forEach(track => {
+                    trackContainer.innerHTML += `
+                        <div class="trackItem">
+                            <img src="${track.image}">
+                            <p>${track.name} by ${track.artist}</p>
+                        </div>
+                    `;
+                });
+            }catch(error){
+                console.error('Error fetching tracks:', error);
+            }
+        }
+
+        fetchAndDisplayTopTracks();
+    </script>
+</body>
+</html>
